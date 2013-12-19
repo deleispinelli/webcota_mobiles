@@ -1,5 +1,6 @@
 function insert_teste()
 {
+	alert('INSERT teste ');
 	db.transaction (function (transaction) 
 	{
 	  
@@ -16,6 +17,7 @@ function insert_teste()
 
 function select_teste()
 {
+	alert('SELECT teste ');	
 	db.transaction (function (transaction) 
 	{
 	  
@@ -48,6 +50,7 @@ function select_teste()
 
 function select_ws_oportunidade()
 {
+	alert('SELECT ws_oportunidade');
 	db.transaction (function (transaction) 
 	{
 	  
@@ -80,6 +83,7 @@ function select_ws_oportunidade()
 
 function insert_ws_oportunidade()
 {
+	alert('INSERT simples ws_oportunidade');
 	db.transaction (function (transaction) 
 	{
 	  
@@ -96,6 +100,7 @@ function insert_ws_oportunidade()
 
 function insert_all_ws_oportunidade(valores)
 {
+	alert('INSERT CSV ALL ws_oportunidade'); 
 	//alert(valores);
 	db.transaction (function (transaction) 
 	{

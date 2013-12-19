@@ -113,6 +113,7 @@ function create_database()
   
 if (db)
 {
+	alert('INSERT dados todas tabelas ');
 	db.transaction(function(x) {
 		x.executeSql('CREATE TABLE IF NOT EXISTS usuarios (id PRIMARY KEY, nome_de_usuario TEXT, codigo TEXT, razao_social TEXT, cnpj TEXT, telefone TEXT, email TEXT, endereco TEXT, bairro TEXT, cep TEXT, municipio TEXT, uf TEXT, razao_social_da_empresa TEXT, cnpj_da_empresa TEXT, telefone_1_da_empresa TEXT, telefone_2_da_empresa TEXT, email_da_empresa TEXT, endereco_da_empresa TEXT, numero_da_empresa TEXT, bairro_da_empresa TEXT, cep_da_empresa TEXT, municipio_da_empresa TEXT, uf_da_empresa TEXT, codigo_da_tabela_de_preco TEXT, unidades TEXT, dap_empresa REAL, dap_max REAL, dap_min REAL) ');
 		
@@ -141,6 +142,7 @@ else
 
 function criar_tabelas()
 {
+	alert('CREATE todas tabelas ');
 	db.transaction(function(x) {
 		x.executeSql('CREATE TABLE IF NOT EXISTS usuarios (id PRIMARY KEY, nome_de_usuario TEXT, codigo TEXT, razao_social TEXT, cnpj TEXT, telefone TEXT, email TEXT, endereco TEXT, bairro TEXT, cep TEXT, municipio TEXT, uf TEXT, razao_social_da_empresa TEXT, cnpj_da_empresa TEXT, telefone_1_da_empresa TEXT, telefone_2_da_empresa TEXT, email_da_empresa TEXT, endereco_da_empresa TEXT, numero_da_empresa TEXT, bairro_da_empresa TEXT, cep_da_empresa TEXT, municipio_da_empresa TEXT, uf_da_empresa TEXT, codigo_da_tabela_de_preco TEXT, unidades TEXT, dap_empresa REAL, dap_max REAL, dap_min REAL) ');
 		
