@@ -7,7 +7,7 @@ function insert_teste()
 	  
 		function (transaction, result)
 		{
-			console.log('INSERT teste ok');
+			alert('INSERT teste ok');
 			$('#retorno').html('INSERT teste ok');
 	    }, error);
 	  
@@ -87,6 +87,7 @@ function insert_ws_oportunidade()
 	  
 		function (transaction, result)
 		{
+			alert('INSERT simples ws_oportunidade ok');
 			$('#retorno').html('INSERT simples ws_oportunidade ok');
 	    }, error);
 	  
@@ -103,6 +104,7 @@ function insert_all_ws_oportunidade(valores)
 	  
 		function (transaction, result)
 		{
+			alert('INSERT CSV ALL ws_oportunidade ok'); 
 			$('#retorno').html('INSERT CSV ALL ws_oportunidade ok'); 
 	    }, error);
 	  

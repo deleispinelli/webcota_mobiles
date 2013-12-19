@@ -129,11 +129,12 @@ if (db)
 		x.executeSql("CREATE TABLE IF NOT EXISTS ws_oportunidade (id PRIMARY KEY, type TEXT, data_cadastro TEXT, data_alteracao TEXT,n_pregao TEXT,descricao TEXT,termino_credenc TEXT,inicio_envio TEXT,termino_envio TEXT,suspensao_n TEXT,suspensao_data TEXT,suspensao_motivo TEXT,faq TEXT,edital TEXT,detalhes TEXT,arquivos TEXT,historico TEXT,filename TEXT,publicado TEXT,excluido TEXT,fisica_cadastro INTEGER,fisica_alteracao INTEGER,status_codigo INTEGER,destaque TEXT,modalidade_codigo INTEGER,regime_contratacao_codigo INTEGER,regime_execucao_codigo INTEGER,cidade_codigo INTEGER,base_codigo INTEGER,estado_codigo INTEGER,robo_id INTEGER,orgao TEXT,status_triagem_codigo INTEGER,cidade TEXT,estado TEXT,descartado TEXT,orgao_codigo INTEGER,tipo_codigo INTEGER,ws_valor REAL) ");
 
 	});
-	
+	alert('success create tables:');
 	$('#retorno').html('success create tables:');
 }
 else
 {
+	alert("DB error : " + err.message);
 	$('#retorno').html("DB error : " + err.message);
 	return false;
 }
@@ -156,12 +157,13 @@ function criar_tabelas()
 		x.executeSql("CREATE TABLE IF NOT EXISTS ws_oportunidade (id PRIMARY KEY, type TEXT, data_cadastro TEXT, data_alteracao TEXT,n_pregao TEXT,descricao TEXT,termino_credenc TEXT,inicio_envio TEXT,termino_envio TEXT,suspensao_n TEXT,suspensao_data TEXT,suspensao_motivo TEXT,faq TEXT,edital TEXT,detalhes TEXT,arquivos TEXT,historico TEXT,filename TEXT,publicado TEXT,excluido TEXT,fisica_cadastro INTEGER,fisica_alteracao INTEGER,status_codigo INTEGER,destaque TEXT,modalidade_codigo INTEGER,regime_contratacao_codigo INTEGER,regime_execucao_codigo INTEGER,cidade_codigo INTEGER,base_codigo INTEGER,estado_codigo INTEGER,robo_id INTEGER,orgao TEXT,status_triagem_codigo INTEGER,cidade TEXT,estado TEXT,descartado TEXT,orgao_codigo INTEGER,tipo_codigo INTEGER,ws_valor REAL) ");
 
 	});
-	
+	alert('success create tables por function:');
 	$('#retorno').html('success create tables por function:');
 }
 
 function error (transaction, err) 
 {
+	alert("DB error : " + err.message);
 	$('#retorno').html("DB error : " + err.message);
 	return false;
 }
