@@ -1,0 +1,32 @@
+body {
+	background: #FFF;
+
+}
+#informacoes_gerais{
+  font-size: 8px;
+	padding: 0 20px 20px 20px;
+}
+
+
+.ajuda, title, #informacoes_gerais, h1, .nao_exibir_impressao, .caixa, .navegacao, #navegacao, .alertas, #rodape {
+	display: none;
+}
+
+.exibir_somente_impressao {
+	display: inline;
+}
+
+#geral {
+	width: 100%;
+}
+
+table.hnordt th, table.hnordt td {
+	font-size: 8px;
+}
+
+#conteudo {
+	margin: 0;
+	padding: 0;
+	-webkit-border-radius: 0;
+	-webkit-box-shadow: none;
+}

@@ -1,0 +1,74 @@
+<html>
+
+<head>
+<script type="text/javascript" src="js/jquery.mobile.custom/jquery.mobile.custom.min.js"></script>
+<script type="text/javascript" src="js/SQLite-Plugin-master/www/SQLitePlugin.js"></script>
+<script type="text/javascript" src="js/xmlhttprequest-master/XMLHttpRequest.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+
+<script type="text/javascript" src="js/db.js"></script>
+<script type="text/javascript" src="js/limpar_tabelas.js"></script>
+<script type="text/javascript" src="js/consultas.js"></script>
+
+<script type="text/javascript">
+
+// Public Methods
+XMLHttpRequest.prototype.open	= function(sMethod, sUrl, bAsync, sUser, sPassword) {
+
+	var self	= this;
+
+	alert(self);
+	this.object.onreadystatechange	= function() {
+	
+		if (self.readyState == self.constructor.DONE) {
+		
+			// BUGFIX: Annoying <parsererror /> in invalid XML responses
+			if (self.responseXML && self.responseXML.documentElement.tagName == "parsererror")
+				self.responseXML	= null;
+			else
+				alert(self);
+		}else
+				alert(self);
+	
+	}
+}
+
+ if (!window.openDatabase) { 
+  alert('este navegador não suporta bancos de dados.'); 
+  return; 
+ } 
+//localStorage.lname = "delei";
+//localStorage.fname = "webcotas";
+
+//sessionStorage.lname = "delei";
+//sessionStorage.fname = "webcotas";
+
+//var db = openDatabase('Webcota', '1.0', 'Webcota', 65535);
+
+
+</script> 
+</head>
+<body>
+	
+	<div id="consultas">
+		<p>consultas</p>
+		<input type="button" id="select_teste" onclick=select_teste() value="Retornar tabela teste" />
+		<input type="button" id="insert_teste" onclick=insert_teste() value="Insere dado tabela teste" />
+		
+	</div>
+	<br/>
+	<div id="limpar">
+		<p>limpar</p>
+		<input type="button" id="limpar_tabelas" onclick=limpar_tabelas() value="Limpar todas tabelas" />
+		<input type="button" id="limpar_tabela_usuarios" onclick=limpar_tabela_usuarios() value="Limpar tabela usuarios" />
+		<input type="button" id="limpar_tabela_sincronizado" onclick=limpar_tabela_sincronizado() value="Limpar tabela sincronizado" />
+		<br/>
+		<input type="button" id="limpar_tabela_licitacoes" onclick=limpar_tabela_licitacoes() value="Limpar tabela licitacoes" />
+		<input type="button" id="limpar_tabela_parceiros" onclick=limpar_tabela_parceiros() value="Limpar tabela parceiros" />
+		<input type="button" id="limpar_tabela_contratos" onclick=limpar_tabela_contratos() value="Limpar tabela contratos" />
+		<input type="button" id="limpar_tabela_teste" onclick=limpar_tabela_teste() value="Limpar tabela teste" />
+	</div>
+	<div id="retorno"></div>
+	
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		
+		<title>webcota</title>
+		
+		<link rel="stylesheet" type="text/css" href="css/jquery_ui/css.css">
+		<link rel="stylesheet" type="text/css" href="css/apprise.css">
+		
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery_ui.js"></script>
+		<script type="text/javascript" src="js/php.js"></script>
+		<script type="text/javascript" src="js/apprise.js"></script>
+		<script type="text/javascript" src="js/meiomask.js"></script>
+		
+		<script type="text/javascript" src="js/config.js"></script>
+		<script type="text/javascript" src="js/db.js"></script>
+		<script type="text/javascript" src="js/geral.js"></script>
+		<script type="text/javascript" src="js/autenticar.js"></script>
+	</head>
+	
+	<body>
+		<div id="autenticar"></div>
+		
+		<div id="geral">
+			<h1>webcota</h1>
+			
+			<div id="conteudo" style="padding: 0 20px 20px 20px;">
+				<h2>Primeira Execução</h2>
+				
+				<div class="autenticar">
+					<div class="ajuda"><p>Esta é sua primeira execução da versão offline, você precisa digitar seus dados e aguardar o sistema baixar as informações dos seus clientes.</p></div>
+					
+					<p>Seu nome:<br><input name="nome_de_usuario" type="text" size="40"></p>
+					
+					<p>Sua senha:<br><input name="senha" type="password" size="40"></p>
+					
+					<p><input type="submit" value="Continuar"></p>
+				</div>
+				
+				<p class="erro" style="display: none;">Para a primeira execução você precisa estar conectado na internet.</p>
+			</div>
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.phonegap.plugins.sqlite"
+    version="1.0.0">
+
+    <name>SQLitePlugin</name>
+    
+    <description>
+      &lt;p&gt;This is plugin for SQLite Db in Apache Cordova/PhoneGap!&lt;/p&gt;
+    </description>
+    
+    <license>Apache 2.0</license>
+
+    <asset src="www/SQLitePlugin.js" target="SQLitePlugin.js" />
+    
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/widget/plugins">
+            <plugin name="SQLitePlugin" value="SQLitePlugin"/>
+        </config-file>
+
+        <source-file src="src/android/SQLitePlugin.java"
+                target-dir="src/android/SQLitePlugin.java" />
+    </platform>
+    
+    
+    <!-- ios -->
+    <platform name="ios">
+        <plugins-plist key="SQLitePlugin" string="SQLitePlugin" />
+        <header-file src="src/ios/SQLitePlugin.h" />
+        <source-file src="src/ios/SQLitePlugin.m" />
+        <framework src="libsqlite3.dylib" />
+    </platform>
+</plugin>

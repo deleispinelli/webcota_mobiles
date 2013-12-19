@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="pt-br" manifest="manifest.manifest">
+	<head>
+		<meta charset="utf-8">
+		
+		<title>webcota</title>
+		
+		
+		<script type="text/javascript" src="js/jquery.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				applicationCache.oncached = function () {
+					window.location = 'sincronizar.html';
+				};
+				
+				applicationCache.onupdateready = function () {
+					window.location = 'sincronizar.html';
+				};
+				
+				applicationCache.onnoupdate = function () {
+					window.location = 'sincronizar.html';
+				};
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div id="geral">
+			<h1>webcota</h1>
+			
+			<div id="conteudo" style="padding: 0 20px 20px 20px;">
+				<h2>Instalando... <span style="color: #900;">NÃO FECHE ESTA JANELA!</span></h2>
+				
+				<progress style="margin-top: 5px; width: 400px; height: 10px;"></progress>
+			</div>
+			
+			
+		</div>
+	</body>
+</html>

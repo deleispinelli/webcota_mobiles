@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Example</title>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery_ui.js"></script>
+	<script type="text/javascript" src="js/php.js"></script>
+	<script type="text/javascript" src="js/apprise.js"></script>
+	<script type="text/javascript" src="js/meiomask.js"></script>
+	
+    <script type="text/javascript" charset="utf-8" src="js/phonegap-1.2.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/conect_database_postgres.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/db.js"></script>
+	<script type="text/javascript" src="js/geral.js"></script>
+	<script type="text/javascript" src="js/autenticar.js"></script>
+	
+	<script type="text/javascript" charset="utf-8">
+var pg = require('pg'); 
+//or native libpq bindings
+//var pg = require('pg').native
+
+var conString = "postgres://postgres:1234@localhost/postgres";
+
+var client = new pg.Client(conString);
+client.connect(function(err) {
+  if(err) {
+    return console.error('could not connect to postgres', err);
+  }
+  client.query('SELECT NOW() AS "theTime"', function(err, result) {
+    if(err) {
+      return console.error('error running query', err);
+    }
+    console.log(result.rows[0].theTime);
+    //output: Tue Jan 15 2013 19:12:47 GMT-600 (CST)
+    client.end();
+  });
+});
+
+
+    </script>
+  </head>
+  <body>
+    <h1>Example</h1>
+    <p>Open Database</p>
+  </body>
+</html>

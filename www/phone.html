@@ -1,0 +1,82 @@
+<!doctype html>
+    <html lang="en">
+        <head>
+			
+            <meta charset="UTF-8">
+			<meta http-equiv="Content-Type:application/json; charset=UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>WEBCOTA</title>
+            <link rel="stylesheet" href="css/jquery.mobile-theme.1.3.css">
+            <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.3.js"></script> 
+            <script type="text/javascript" charset="utf-8" src="js/jquery.mobile.customs/jquery.mobile.custom.js"></script>
+            <script type="text/javascript" charset="utf-8" src="cordova-2.3.0/cordova-js/grunt.js"></script>
+			
+			<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+			
+			<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.0b2.min.css" />
+			<script type="text/javascript" src="js/maps_api.js"></script>
+			<script type="text/javascript" src="js/db.js"></script>
+			<script type="text/javascript" src="js/limpar_tabelas.js"></script>
+			<script type="text/javascript" src="js/consultas.js"></script> 
+			
+			<script type="text/javascript" src="js/jquery.mobile-1.0b2.min.js"></script>
+			<script type="text/javascript" src="js/jquery.mobile-1.3.2.min.map.js"></script>
+			<script type="text/javascript" src="js/jquery.ui.map.full.min.js"></script>
+			<script type="text/javascript" src="js/jquery.ui.map.extensions.js"></script>
+			
+			
+			
+			<script type="text/javascript" src="js/funcoes.js"></script>
+			<script type="text/javascript" src="js/jquery.csv-0.71.min.js"></script>
+			<script type="text/javascript" src="js/ler_csv_ws_oportunidade.js"></script>
+			 
+			
+            <style>
+            .error{
+                font-size: 0.8em;
+                border: 1px solid;
+                margin: 10px 0px;
+                padding:15px 10px 15px 8px;
+                text-align:center;
+                color: #D8000C;
+                background-color: #FFBABA;
+            }
+            </style>
+
+        </head>
+		
+    <body>
+
+
+	<div id="retorno"></div>
+    <div id="consultas">
+		<p>consultas</p>
+		
+		<input type="button" id="select_teste" onclick=select_teste() value="Retornar teste" />
+		<input type="button" id="select_ws_oportunidade" onclick=select_ws_oportunidade() value="Retornar ws_oportunidade" />
+		<input type="button" id="insert_teste" onclick=insert_teste() value="Insere dado teste" />
+		<input type="button" id="insert_ws_oportunidade" onclick=insert_ws_oportunidade() value="Insere teste ws_oportunidade" />
+		<input type="button" id="inserir_csv_ws_oportunidade" onclick=inserir_csv_ws_oportunidade() value="Insere CSV ws_oportunidade" />
+		
+		<!--input type="button" id="create_database" onclick=create_database() value="create database" />
+		<input type="button" id="criar_tabelas" onclick=criar_tabelas() value="criar tabelas" /-->
+		
+	</div>
+	<br/>
+	<div id="limpar">
+		<p>limpar</p>
+		<input type="button" id="limpar_tabelas" onclick=limpar_tabelas() value="Limpar todas tabelas" />
+		<input type="button" id="limpar_tabela_usuarios" onclick=limpar_tabela_usuarios() value="Limpar tabela usuarios" />
+		<input type="button" id="limpar_tabela_sincronizado" onclick=limpar_tabela_sincronizado() value="Limpar tabela sincronizado" />
+		<input type="button" id="limpar_tabela_licitacoes" onclick=limpar_tabela_licitacoes() value="Limpar tabela licitacoes" />
+		<input type="button" id="limpar_tabela_parceiros" onclick=limpar_tabela_parceiros() value="Limpar tabela parceiros" />
+		<input type="button" id="limpar_tabela_contratos" onclick=limpar_tabela_contratos() value="Limpar tabela contratos" />
+		<input type="button" id="limpar_tabela_ws_oportunidade" onclick=limpar_tabela_ws_oportunidade() value="Limpar tabela ws_oportunidade" />
+		<input type="button" id="limpar_tabela_teste" onclick=limpar_tabela_teste() value="Limpar tabela teste" />
+		
+	</div>
+	
+	<div id="arq_csv"></div>
+ 
+    </body>
+</html>

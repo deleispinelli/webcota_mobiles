@@ -1,0 +1,12 @@
+gerar CSV
+
+\copy nome_tabela TO 'C:/Users/User/Desktop/csv/nome_tabela' with delimiter ';'
+
+Importar o arquivo texto CSV para uma tabela com estrutura semelhante à do arquivo csv:
+
+\copy nometabela from ./arquivo.csv -- o arquivo estando no path do usuário
+
+
+
+
+http://www.postgresql.org/docs/current/interactive/sql-copy.html
