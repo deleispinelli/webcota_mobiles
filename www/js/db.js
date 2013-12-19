@@ -1,4 +1,4 @@
-//document.addEventListener("deviceready", init, false);
+document.addEventListener("deviceready", init, false);
 
 var db = '';
 
